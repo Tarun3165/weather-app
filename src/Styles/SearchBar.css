@@ -1,0 +1,113 @@
+.SearchContainer{
+    width:100%;
+    display: flex;
+    box-shadow: 0px 0px 7px rgba(0,0,0,.8);
+    border-radius: 8px;
+}
+
+.searchbar{
+    flex-basis:90%;
+}
+
+.searchbar>input{
+    margin-left: -5px;
+    width:92%;
+    padding:2%;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: larger;
+    font-weight: 700;
+}
+.searchicon{
+    flex-basis: 5%;
+}
+.searchicon>img{
+    width:70%;
+    height:100%;
+}
+.locationicon{
+    flex-basis: 5%;
+    text-align: center;
+}
+.locationicon>img{
+    width:70%;
+    height:100%;
+   
+}
+.searchList{
+    position: absolute;
+    margin-top: 10px;
+    width:60%;
+    background-color: rgb(255,255,255);
+    z-index: 1;
+    border-radius: 5px;
+}
+.searchList>hr{
+ border:0.5 solid rgb(212, 206, 206);
+}
+.citydiv{
+    margin: 18px;
+    font-family: 700;
+    color:2c3e50;
+    line-height: 18px;
+    font-size: 16px;
+}
+.display{
+    position: absolute;
+    margin-top: 10px;
+    width:60%;
+    background-color: rgb(255,255,255);
+    z-index: 1;
+    border-radius: 5px;
+    display: none;
+}
+
+/* 
+@media only screen and (max-width: 1100px) {
+   
+    .locationicon>img{
+        width:90%;
+        height:100%;
+        position: relative;
+        left: 35px;
+    }
+   
+}
+
+@media only screen and (max-width: 1000px) {
+   
+    .locationicon>img{
+        width:90%;
+        height:100%;
+        position: relative;
+        left: 40px;
+    }
+    .searchicon>img{
+        width:90%;
+        height:100%;
+        position: relative;
+        left:-50px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .searchbar{
+        flex-basis:95%;
+        padding-left:5%;
+        box-shadow: 0px 0px 7px rgba(0,0,0,.8);
+        border-radius: 8px;
+    }
+    .locationicon>img{
+        width:90%;
+        height:100%;
+        position: relative;
+        left: 23px;
+    }
+    .searchicon>img{
+        width:90%;
+        height:100%;
+        position: relative;
+        left:-50px;
+    }
+} */

@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState,useContext } from "react"
+import './Styles/App.css';
+import SearchBar from "./Components/SearchBar";
+import TemperatureGraph from "./Components/TemperatureGraph";
+import { ContextState } from "./Context/ContextProvider";
+
 
 function App() {
-  return (
+  const { fetchData,data,cityData,handleSetData,location,handleSearch } = useContext(ContextState)
+  
+  // const [data, setData] = useState(fetchData.daily[dayIndex]) 
+
+  return  (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="container">
+        <SearchBar location={location} cityData={cityData} handleSearch={handleSearch}/>
+        {fetchData && <TemperatureGraph handleSetData={handleSetData} data={data} fetchData={fetchData}/>} 
+      </div>
     </div>
   );
 }
